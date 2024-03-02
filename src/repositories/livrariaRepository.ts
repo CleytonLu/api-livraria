@@ -12,7 +12,7 @@ export const create = ({ body }: livrariaRepositoryProps) => {
       }
 
       const res = JSON.parse(JSON.stringify(result));
-      resolve(res);
+      resolve(res[0]);
     });
   });
 };

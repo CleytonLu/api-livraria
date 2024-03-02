@@ -28,9 +28,9 @@ export const updateLivro = async (req: any, res: any) => {
     params: { id },
   } = req;
 
-  const result = await update({ body, id });
+  await update({ body, id });
 
-  res.json(result);
+  res.json(body);
 };
 
 export const deleteLivro = async (req: any, res: any) => {

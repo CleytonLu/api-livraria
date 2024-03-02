@@ -6,11 +6,12 @@ import {
   getLivrosId,
   updateLivro,
 } from "./controllers";
+import { inputValidation } from "./middleware";
 
 export const router = Router();
 
-router.post("/livros", createLivro);
+router.post("/livros", inputValidation, createLivro);
 router.get("/livros", getLivros);
 router.get("/livros/:id", getLivrosId);
-router.put("/livros/:id", updateLivro);
+router.put("/livros/:id", /* inputValidation, */ updateLivro);
 router.delete("/livros/:id", deleteLivro);
